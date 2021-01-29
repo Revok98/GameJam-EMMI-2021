@@ -5,6 +5,7 @@ using UnityEngine;
 public class CollectibleLight : CollectibleItem
 {
 
+    // Usage : ajouter une directional light (ou une light quelconque) dans la scène et le placer en paramètre 
     public Light light;
 
     public void Start()
