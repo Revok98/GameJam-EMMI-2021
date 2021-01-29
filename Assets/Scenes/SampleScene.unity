@@ -152,10 +152,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 199678061}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9216c20ceb314c147b739934ae2152c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 1423e9abef0224c45baa447852d635d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Eymeric
+  SceneName: Eymeric
 --- !u!135 &199678063
 SphereCollider:
   m_ObjectHideFlags: 0
