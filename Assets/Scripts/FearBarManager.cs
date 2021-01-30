@@ -24,7 +24,7 @@ public class FearBarManager : MonoBehaviour
         }
         if (fill >= 1)
         {
-            SceneManager.LoadScene("Eymeric");
+            SceneManager.LoadScene("GameOver");
         }
     }
 }
