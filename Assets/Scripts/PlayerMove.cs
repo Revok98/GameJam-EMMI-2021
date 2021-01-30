@@ -11,6 +11,8 @@ public class PlayerMove : MonoBehaviour
     private float jumpHeight = 1.0f;
     private float gravityValue = -9.81f;
     public bool hide = false;
+    public float speedBonus = 1;
+    public float speedBonusTime = 0;
 
     private void Start()
     {
@@ -21,6 +23,16 @@ public class PlayerMove : MonoBehaviour
     {
         if (!hide)
         {
+        if (speedBonusTime > 0)
+        {
+            speedBonusTime -= Time.deltaTime;
+        }
+        else
+        {
+            speedBonus = 1;
+        }
+        groundedPlayer = controller.isGrounded;
+        if (groundedPlayer && playerVelocity.y < 0)
             groundedPlayer = controller.isGrounded;
             if (groundedPlayer && playerVelocity.y < 0)
             {
@@ -34,7 +46,6 @@ public class PlayerMove : MonoBehaviour
             {
                 gameObject.transform.forward = move;
             }
-
             playerVelocity.y += gravityValue * Time.deltaTime;
             controller.Move(playerVelocity * Time.deltaTime);
         }
