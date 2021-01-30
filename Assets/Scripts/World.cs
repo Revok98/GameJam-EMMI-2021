@@ -12,7 +12,7 @@ public class World : MonoBehaviour
     void Start()
     {
         GetComponent<NavMeshSurface>().BuildNavMesh();
-        Instantiate(agent, new Vector3(9,0,9), Quaternion.identity);
+        Instantiate(agent, new Vector3(3,1,6), Quaternion.identity);
     }
 
     // Update is called once per frame

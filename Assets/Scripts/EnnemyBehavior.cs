@@ -43,8 +43,8 @@ public class EnnemyBehavior : MonoBehaviour
         target = player.transform.position;
         ag = GetComponent<NavMeshAgent>();
         player_script = player.GetComponent<PlayerMove>();
-        pattern.Add(new Vector3(9,0,9));
-        pattern.Add(new Vector3(2,0,2));
+        pattern.Add(new Vector3(3,0,6));
+        pattern.Add(new Vector3(-1,0,6));
         dist_target = transform.position.y;
 
         initLightElements();

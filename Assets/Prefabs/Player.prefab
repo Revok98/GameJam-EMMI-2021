@@ -232,6 +232,8 @@ GameObject:
   - component: {fileID: 4472556137763098601}
   - component: {fileID: 4472556137763098600}
   - component: {fileID: 4472556137763098604}
+  - component: {fileID: 7093710552148473976}
+  - component: {fileID: 5979052893323400428}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -334,3 +336,33 @@ MonoBehaviour:
   hide: 0
   speedBonus: 1
   speedBonusTime: 0
+--- !u!114 &7093710552148473976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4472556137763098599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0797c11ede7ca147912ce8765ef95bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bar: {fileID: 0}
+  fill: 0
+--- !u!114 &5979052893323400428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4472556137763098599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53559217ff4d16642a44f4bd54c78f3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  images:
+  - {fileID: 0}
+  - {fileID: 0}
+  lightTime: 0
