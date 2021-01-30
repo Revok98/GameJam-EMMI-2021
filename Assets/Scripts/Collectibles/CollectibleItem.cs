@@ -9,7 +9,7 @@ public abstract class CollectibleItem : MonoBehaviour
 
     private void OnTriggerEnter(Collider element)
     {
-        if (element.tag == "CanCollect")
+        if (element.tag == "Player")
         {
             if(audioSource != null) audioSource.Play();
             Destroy(gameObject);
