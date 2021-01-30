@@ -17,46 +17,49 @@ public class PlayerMove : MonoBehaviour
 
     private void Start()
     {
-        GameObject child = this.transform.Find("footsteps").gameObject;
+        GameObject child = this.transform.Find("Footsteps").gameObject;
         footsteps = child.GetComponent<AudioSource>();
         controller = gameObject.AddComponent<CharacterController>();
     }
 
     void Update()
     {
-        if (speedBonusTime > 0)
+        if (!hide)
         {
-            speedBonusTime -= Time.deltaTime;
-        }
-        else
-        {
-            speedBonus = 1;
-        }
-        groundedPlayer = controller.isGrounded;
-        if (groundedPlayer && playerVelocity.y < 0)
-        {
-            playerVelocity.y = 0f;
-        }
-
-        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        controller.Move(move * Time.deltaTime * playerSpeed * speedBonus);
-
-        if (move != Vector3.zero)
-        {
-            if (!footsteps.isPlaying)
+            if (speedBonusTime > 0)
             {
-                Debug.Log("here1");
-                footsteps.Play();
+                speedBonusTime -= Time.deltaTime;
             }
-            gameObject.transform.forward = move;
-        }
-        else
-        {
-            Debug.Log("here2");
-            footsteps.Stop();
-        }
+            else
+            {
+                speedBonus = 1;
+            }
+            groundedPlayer = controller.isGrounded;
+            if (groundedPlayer && playerVelocity.y < 0)
+                groundedPlayer = controller.isGrounded;
+            if (groundedPlayer && playerVelocity.y < 0)
+            {
+                playerVelocity.y = 0f;
+            }
 
-        playerVelocity.y += gravityValue * Time.deltaTime;
-        controller.Move(playerVelocity * Time.deltaTime);
+            Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            controller.Move(move * Time.deltaTime * playerSpeed);
+
+            if (move != Vector3.zero)
+            {
+                if (!footsteps.isPlaying) footsteps.Play();
+                gameObject.transform.forward = move;
+            }
+            else
+            {
+                footsteps.Stop();
+            }
+            playerVelocity.y += gravityValue * Time.deltaTime;
+            controller.Move(playerVelocity * Time.deltaTime);
+        }
+        if (Input.GetKeyDown("h"))
+        {
+            hide = !hide;
+        }
     }
 }
