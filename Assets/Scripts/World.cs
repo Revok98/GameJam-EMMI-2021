@@ -7,12 +7,11 @@ using UnityEngine.AI;
 public class World : MonoBehaviour
 {
     public GameObject agent;
-    public GameObject terrain;
 
     // Start is called before the first frame update
     void Start()
     {
-        terrain.GetComponent<NavMeshSurface>().BuildNavMesh();
+        GetComponent<NavMeshSurface>().BuildNavMesh();
     }
 
     // Update is called once per frame

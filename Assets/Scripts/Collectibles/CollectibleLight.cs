@@ -18,6 +18,6 @@ public class CollectibleLight : CollectibleItem
     public override void collectibleMethod()
     {
         light.enabled = true;
-        GameObject.Find("Player").GetComponent<PlayerItems>().lightTime = 10;
+        GameObject.Find("Player").GetComponent<PlayerItems>().lightTime = 10000;
     }
 }
