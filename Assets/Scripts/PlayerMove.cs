@@ -43,7 +43,7 @@ public class PlayerMove : MonoBehaviour
             }
 
             Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-            controller.Move(move * Time.deltaTime * playerSpeed);
+            controller.Move(move * Time.deltaTime * playerSpeed * speedBonus);
 
             if (move != Vector3.zero)
             {
