@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class PauseMenu : MonoBehaviour
 {
     public static bool gameIsPaused = false;
-    public GameObject Button;
+    public GameObject ButtonMenu;
+    public GameObject ButtonTuto;
+    public GameObject Texte;
 
     void Update()
     {
@@ -26,13 +28,17 @@ public class PauseMenu : MonoBehaviour
             Debug.Log("IF");
             GetComponent<Image>().enabled = true;
             Time.timeScale = 0f;
-            Button.SetActive(true);
+            ButtonMenu.SetActive(true);
+            ButtonTuto.SetActive(true);
+            Texte.SetActive(true);
         }
         else
         {
             GetComponent<Image>().enabled = false;
             Time.timeScale = 1;
-            Button.SetActive(false);
+            ButtonMenu.SetActive(false);
+            ButtonTuto.SetActive(false);
+            Texte.SetActive(false);
         }
     }
 }
