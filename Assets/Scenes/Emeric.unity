@@ -389,6 +389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 2
+  hide: 0
 --- !u!1 &1764191659
 GameObject:
   m_ObjectHideFlags: 0
