@@ -13,9 +13,12 @@ public class PlayerMove : MonoBehaviour
     public bool hide = false;
     public float speedBonus = 1;
     public float speedBonusTime = 0;
+    private AudioSource footsteps;
 
     private void Start()
     {
+        GameObject child = this.transform.Find("footsteps").gameObject;
+        footsteps = child.GetComponent<AudioSource>();
         controller = gameObject.AddComponent<CharacterController>();
     }
 
@@ -40,7 +43,17 @@ public class PlayerMove : MonoBehaviour
 
         if (move != Vector3.zero)
         {
+            if (!footsteps.isPlaying)
+            {
+                Debug.Log("here1");
+                footsteps.Play();
+            }
             gameObject.transform.forward = move;
+        }
+        else
+        {
+            Debug.Log("here2");
+            footsteps.Stop();
         }
 
         playerVelocity.y += gravityValue * Time.deltaTime;
