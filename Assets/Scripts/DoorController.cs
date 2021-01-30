@@ -9,6 +9,7 @@ public class DoorController : MonoBehaviour
 
     bool open = false;
     public bool locked = true;
+    public AudioSource audioSource;
 
     float defaultRotationAngle;
     float currentRotationAngle;
@@ -36,6 +37,7 @@ public class DoorController : MonoBehaviour
         if (other.CompareTag("Player") && !locked)
         {
             open = true;
+            if (audioSource != null) audioSource.Play();
             currentRotationAngle = transform.localEulerAngles.y;
             openTime = 0;
         }
