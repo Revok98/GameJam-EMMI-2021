@@ -10,6 +10,11 @@ public class CollectibleSound : CollectibleItem
     public Image image;
     public Canvas canvas;
 
+    private void Start()
+    {
+        longterm = true;
+    }
+
     public override void collectibleMethod()
     {
         monsters = GameObject.FindGameObjectsWithTag("Ennemy");

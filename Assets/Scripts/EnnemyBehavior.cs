@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-
+using UnityEngine.SceneManagement;
 public class EnnemyBehavior : MonoBehaviour
 {
     NavMeshAgent ag;
@@ -12,7 +12,7 @@ public class EnnemyBehavior : MonoBehaviour
     public float dist_monster = 10f;
     public float sightAngle = 45f;
     PlayerMove player_script;
-    private List<Vector3> pattern = new List<Vector3>();
+    public List<Vector3> pattern = new List<Vector3>();
     int current_index = 0;
     private bool begin = false;
     private float dist_target;
@@ -43,8 +43,6 @@ public class EnnemyBehavior : MonoBehaviour
         target = player.transform.position;
         ag = GetComponent<NavMeshAgent>();
         player_script = player.GetComponent<PlayerMove>();
-        pattern.Add(new Vector3(3,0,6));
-        pattern.Add(new Vector3(-1,0,6));
         dist_target = transform.position.y;
 
         initLightElements();
@@ -57,7 +55,6 @@ public class EnnemyBehavior : MonoBehaviour
         RaycastHit hit;
         float angle = Vector3.Angle(transform.forward,player.transform.position-transform.position);
         Physics.Raycast(gameObject.transform.position, -(gameObject.transform.position - player.transform.position).normalized, out hit, Mathf.Infinity);
-        Debug.DrawRay(transform.position, -(gameObject.transform.position - player.transform.position).normalized * hit.distance, Color.yellow);
         if (!following && !player_script.hide && Vector3.Distance(player.transform.position, transform.position) <= dist_monster && hit.collider.gameObject.tag == "Player" && angle <= sightAngle)
         {
             ag.SetDestination(player.transform.position);
@@ -102,7 +99,7 @@ public class EnnemyBehavior : MonoBehaviour
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.tag == "Player") {
-            Debug.Log("T'es mort");
+            SceneManager.LoadScene("GameOver");
         }
     }
 }
