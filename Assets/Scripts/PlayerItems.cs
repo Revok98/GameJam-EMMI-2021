@@ -77,6 +77,10 @@ public class PlayerItems : MonoBehaviour
         {
             image = images[0];
         }
+        else if(obj.GetType() == typeof(CollectibleSound))
+        {
+            image = images[2];
+        }
         else
         {
             image = images[0];
@@ -106,6 +110,10 @@ public class PlayerItems : MonoBehaviour
             else if (listItems[i].GetType() == typeof(CollectibleSpeed))
             {
                 image = images[0];
+            }
+            else if (listItems[i].GetType() == typeof(CollectibleSound))
+            {
+                image = images[2];
             }
             else
             {
