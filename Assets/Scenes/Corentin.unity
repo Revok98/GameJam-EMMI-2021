@@ -664,7 +664,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2462847665540120090, guid: 39facc1b1ad431c4a8c72e876da4d93c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.55
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2462847665540120090, guid: 39facc1b1ad431c4a8c72e876da4d93c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -698,6 +698,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4951968930814692210, guid: 39facc1b1ad431c4a8c72e876da4d93c, type: 3}
+      propertyPath: testBool
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6099365688097640205, guid: 39facc1b1ad431c4a8c72e876da4d93c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864829177636003553, guid: 39facc1b1ad431c4a8c72e876da4d93c, type: 3}
+      propertyPath: m_Intensity
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864829177636003553, guid: 39facc1b1ad431c4a8c72e876da4d93c, type: 3}
+      propertyPath: m_BounceIntensity
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39facc1b1ad431c4a8c72e876da4d93c, type: 3}
 --- !u!1001 &1989934378
@@ -707,6 +723,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2462847665540120084, guid: 39facc1b1ad431c4a8c72e876da4d93c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2462847665540120086, guid: 39facc1b1ad431c4a8c72e876da4d93c, type: 3}
       propertyPath: m_Name
       value: Ennemy (1)
@@ -725,7 +745,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2462847665540120090, guid: 39facc1b1ad431c4a8c72e876da4d93c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.99999905
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2462847665540120090, guid: 39facc1b1ad431c4a8c72e876da4d93c, type: 3}
       propertyPath: m_LocalPosition.z

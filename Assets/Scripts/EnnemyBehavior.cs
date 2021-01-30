@@ -10,11 +10,32 @@ public class EnnemyBehavior : MonoBehaviour
     Vector3 target;
     private bool following = false;
     public float dist_monster = 10f;
+    public float sightAngle = 45f;
     PlayerMove player_script;
     private List<Vector3> pattern = new List<Vector3>();
     int current_index = 0;
     private bool begin = false;
     private float dist_target;
+    private Light lightSight;
+    private Material leftEye;
+    private Material rightEye;
+    public Color stdColor;
+    public Color alertColor;
+
+
+    void initLightElements()
+    {
+        GameObject lightChild = this.transform.Find("LightSight").gameObject;
+        lightSight = lightChild.GetComponent<Light>();
+        lightSight.spotAngle = sightAngle;
+        lightSight.range = dist_monster;
+        GameObject lEyeChild = this.transform.Find("LeftEye").gameObject;
+        leftEye = lEyeChild.GetComponent<Renderer>().material;
+        GameObject rEyeChild = this.transform.Find("RightEye").gameObject;
+        rightEye = rEyeChild.GetComponent<Renderer>().material;
+
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +46,8 @@ public class EnnemyBehavior : MonoBehaviour
         pattern.Add(new Vector3(9,0,9));
         pattern.Add(new Vector3(2,0,2));
         dist_target = transform.position.y;
+
+        initLightElements();
     }
 
     // Update is called once per frame
@@ -35,7 +58,7 @@ public class EnnemyBehavior : MonoBehaviour
         float angle = Vector3.Angle(transform.forward,player.transform.position-transform.position);
         Physics.Raycast(gameObject.transform.position, -(gameObject.transform.position - player.transform.position).normalized, out hit, Mathf.Infinity);
         Debug.DrawRay(transform.position, -(gameObject.transform.position - player.transform.position).normalized * hit.distance, Color.yellow);
-        if (!following && !player_script.hide && Vector3.Distance(player.transform.position, transform.position) <= dist_monster && hit.collider.gameObject.tag == "Player" && angle <= 45)
+        if (!following && !player_script.hide && Vector3.Distance(player.transform.position, transform.position) <= dist_monster && hit.collider.gameObject.tag == "Player" && angle <= sightAngle)
         {
             ag.SetDestination(player.transform.position);
             target = player.transform.position;
@@ -47,7 +70,7 @@ public class EnnemyBehavior : MonoBehaviour
             dist_target = transform.position.y;
             begin = true;
         }
-        else if (following && (player_script.hide || (hit.collider.gameObject.tag != "Player" && angle >= 45))) { //on arrête de follow
+        else if (following && (player_script.hide || (hit.collider.gameObject.tag != "Player" && angle >= sightAngle))) { //on arrête de follow
             ag.SetDestination(pattern[current_index]);
             target = pattern[current_index];
             following = false;
@@ -60,6 +83,19 @@ public class EnnemyBehavior : MonoBehaviour
             current_index = (current_index + 1) % pattern.Count;
             ag.SetDestination(pattern[current_index]);
             target = pattern[current_index];
+        }
+
+        if (following)
+        {
+            lightSight.color = alertColor;
+            leftEye.SetColor("_Color", alertColor);
+            rightEye.SetColor("_Color", alertColor);
+        }
+        else
+        {
+            lightSight.color = stdColor;
+            leftEye.SetColor("_Color", stdColor);
+            rightEye.SetColor("_Color", stdColor);
         }
     }
 
