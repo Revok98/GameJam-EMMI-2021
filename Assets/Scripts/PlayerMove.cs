@@ -10,6 +10,7 @@ public class PlayerMove : MonoBehaviour
     public float playerSpeed = 2.0f;
     private float jumpHeight = 1.0f;
     private float gravityValue = -9.81f;
+    public bool hide = false;
 
     private void Start()
     {
