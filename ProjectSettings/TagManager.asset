@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CanCollect
   - Wall
+  - Ennemy
   layers:
   - Default
   - TransparentFX
