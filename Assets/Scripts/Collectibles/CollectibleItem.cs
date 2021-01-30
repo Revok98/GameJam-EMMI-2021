@@ -6,6 +6,7 @@ public abstract class CollectibleItem : MonoBehaviour
 {
     // Usage : placer ou non une audioSource dans la scène, à mettre en paramètre (si null, ça fait pas de son)
     public AudioSource audioSource;
+    private bool longterm =false;
 
     private void OnTriggerEnter(Collider element)
     {
@@ -13,7 +14,13 @@ public abstract class CollectibleItem : MonoBehaviour
         {
             if(audioSource != null) audioSource.Play();
             Destroy(gameObject);
-            collectibleMethod();
+            if (!longterm)
+            {
+                collectibleMethod();
+            }
+            else {
+                element.gameObject.GetComponents<PlayerItems>().CollectItem(this);
+            }
         }
     }
 
