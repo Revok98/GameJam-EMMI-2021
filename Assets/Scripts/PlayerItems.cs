@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class PlayerItems : MonoBehaviour
 {
     List<CollectibleItem> listItems = new List<CollectibleItem>();
     // Start is called before the first frame update
+    public Image image;
     void Start()
     {
         
@@ -46,8 +47,21 @@ public class PlayerItems : MonoBehaviour
         }
     }
 
-    void CollectItem(CollectibleItem obj) {
+    public void CollectItem(CollectibleItem obj) {
         listItems.Add(obj);
+        Image draw = Instantiate(image, new Vector3(0, 0, 0), Quaternion.identity);
+        GameObject inventory = GameObject.Find("Inventory");
+        draw.transform.SetParent(inventory.transform, false);
+        draw.transform.localPosition = new Vector3(-37 + 25 * (listItems.Count -1), -1, 0);
+        draw.enabled = true;
+    }
 
+    void UpdateInterface()
+    {
+        Image draw = Instantiate(image, new Vector3(0, 0, 0), Quaternion.identity);
+        GameObject inventory = GameObject.Find("Inventory");
+        draw.transform.SetParent(inventory.transform, false);
+        draw.transform.localPosition = new Vector3(-37 + 25 * (listItems.Count - 1), -1, 0);
+        draw.enabled = true;
     }
 }

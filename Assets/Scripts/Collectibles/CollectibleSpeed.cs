@@ -7,6 +7,7 @@ public class CollectibleSpeed : CollectibleItem
     // Start is called before the first frame update
     public void Start()
     {
+        longterm = true;
     }
 
     public override void collectibleMethod()
