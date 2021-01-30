@@ -9,23 +9,34 @@ public class EnnemyBehavior : MonoBehaviour
     GameObject player;
     Vector3 target;
     private bool moving = false;
+    public float dist_monster = 10f;
+    PlayerMove player_script;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Player");
         target = player.transform.position;
         ag = GetComponent<NavMeshAgent>();
+        player_script = player.GetComponent<PlayerMove>();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!moving) {
+        if (!moving && !player_script.hide && Vector3.Distance(player.transform.position, transform.position) <= dist_monster)
+        {
+            ag.isStopped = false;
             ag.SetDestination(player.transform.position);
+            target = player.transform.position;
             moving = true;
         }
-        if ((target - transform.position).magnitude <= 1f) {
+        else if (player_script.hide) {
+            ag.isStopped = true;
+            moving = false;
+        }
+        else if ((target - transform.position).magnitude <= 1f) {
+            ag.isStopped = false;
             ag.SetDestination(player.transform.position);
             target = player.transform.position;
         }
