@@ -1915,7 +1915,9 @@ MonoBehaviour:
   image: {fileID: 322297307}
   isDialogDone: 0
   isDialog2Done: 0
-  m_dialogPlayer: []
+  m_dialogPlayer:
+  - text: Oh Hanisa !
+    color: {r: 0, g: 0, b: 0, a: 0}
   m_dialogMonster: []
   m_dialogDisplayer: {fileID: 1156067566}
 --- !u!4 &2143606379
