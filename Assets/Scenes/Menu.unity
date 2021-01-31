@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1423e9abef0224c45baa447852d635d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: Level1
+  SceneName: Introduction
 --- !u!1 &242254572 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4343138058795521988, guid: 30ccad44ab2e97d4c961ca6852d055cf, type: 3}
@@ -300,7 +300,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7907660445597479334, guid: 30ccad44ab2e97d4c961ca6852d055cf, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -64
+      value: -54
       objectReference: {fileID: 0}
     - target: {fileID: 7907660445597479334, guid: 30ccad44ab2e97d4c961ca6852d055cf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
