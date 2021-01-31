@@ -5,7 +5,7 @@ using UnityEngine;
 public class OpeningDialog : MonoBehaviour
 {
     public List<DialogPage> m_dialogWithPlayer;
-    private bool alreadyTalk = false;
+    public bool alreadyTalk = false;
     public DialogManager m_dialogDisplayer;
 
     public List<DialogPage> GetDialog()
