@@ -9,6 +9,7 @@ public class CinematicManager : MonoBehaviour
     public GameObject character;
     public List<GameObject> charaPoints = new List<GameObject>();
     public GameObject monster;
+    public GameObject monsterAnim;
     public List<GameObject> monsterPoints = new List<GameObject>();
     public Image image;
     public bool isDialogDone;
@@ -16,6 +17,8 @@ public class CinematicManager : MonoBehaviour
     private bool isTransitionDone;
     private bool isTransitionOpenDone;
     private CharacterAnimation charaAnimation;
+    private MonsterAnimated monsterAnimation;
+
     private enum characterPosStates { START, POS1, POS2, BED };
     private enum monsterPosStates { START, POS1, POS2};
     private characterPosStates characterPosState;
@@ -26,6 +29,8 @@ public class CinematicManager : MonoBehaviour
     {
         charaAnimation = character.GetComponent<CharacterAnimation>();
         charaAnimation.state = CharacterAnimation.states.WALKING;
+        monsterAnimation = monsterAnim.GetComponent<MonsterAnimated>();
+        monsterAnimation.state = MonsterAnimated.states.WALKING;
         characterPosState = characterPosStates.START;
         monsterPosState = monsterPosStates.START;
         monster.SetActive(false);
@@ -89,6 +94,7 @@ public class CinematicManager : MonoBehaviour
                         monsterPosState = monsterPosStates.POS2;
                     break;
                 case (monsterPosStates.POS2):
+                    monsterAnimation.state = MonsterAnimated.states.STOP;
                     monster.transform.LookAt(new Vector3(monsterPoints[2].transform.position.x, 1, monsterPoints[2].transform.position.z));
                     playMonsterDialog();
                     break;

@@ -1010,6 +1010,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1271998816 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3542022122187859345, guid: 39facc1b1ad431c4a8c72e876da4d93c, type: 3}
+  m_PrefabInstance: {fileID: 1730125175}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1373901909
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1773,6 +1778,7 @@ MonoBehaviour:
   - {fileID: 1105881529}
   - {fileID: 1226537453}
   monster: {fileID: 1730125176}
+  monsterAnim: {fileID: 1271998816}
   monsterPoints:
   - {fileID: 1020875342}
   - {fileID: 1414251516}
