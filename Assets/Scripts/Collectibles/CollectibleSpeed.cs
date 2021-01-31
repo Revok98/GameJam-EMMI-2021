@@ -13,7 +13,17 @@ public class CollectibleSpeed : CollectibleItem
     public override void collectibleMethod()
     {
         PlayerMove player = GameObject.Find("Player").GetComponent<PlayerMove>();
-        player.speedBonus = 2;
-        player.speedBonusTime = 10;
+        PlayerMoveInverse player2 = GameObject.Find("Player").GetComponent<PlayerMoveInverse>();
+        if(player == null)
+        {
+            player.speedBonus = 2;
+            player.speedBonusTime = 10;
+        }
+        else
+        {
+            player2.speedBonus = 2;
+            player2.speedBonusTime = 10;
+        }
+        
     }
 }
