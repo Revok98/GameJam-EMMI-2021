@@ -22,6 +22,10 @@ public class CinematicManager : MonoBehaviour
     private monsterPosStates monsterPosState;
     private float minPointDistance = 0.1f;
 
+    public List<DialogPage> m_dialogPlayer;
+    public List<DialogPage> m_dialogMonster;
+    public DialogManager m_dialogDisplayer;
+
     private void Start()
     {
         charaAnimation = character.GetComponent<CharacterAnimation>();
@@ -37,6 +41,9 @@ public class CinematicManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!character.GetComponent<OpeningDialog>().alreadyTalk || m_dialogDisplayer.isActiveAndEnabled) {
+            return;
+        }
         switch (characterPosState)
         {
             case (characterPosStates.START):
