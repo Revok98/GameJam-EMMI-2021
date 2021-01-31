@@ -14,11 +14,14 @@ public class PlayerMove : MonoBehaviour
     public float speedBonus = 1;
     public float speedBonusTime = 0;
     private AudioSource footsteps;
+    private CharacterAnimation animation;
 
     private void Start()
     {
         GameObject child = this.transform.Find("Footsteps").gameObject;
         footsteps = child.GetComponent<AudioSource>();
+        GameObject animChild = this.transform.Find("PersoAnimated").gameObject;
+        animation = animChild.GetComponent<CharacterAnimation>();
         controller = gameObject.AddComponent<CharacterController>();
     }
 
@@ -47,11 +50,13 @@ public class PlayerMove : MonoBehaviour
 
             if (move != Vector3.zero)
             {
+                animation.state = CharacterAnimation.states.WALKING;
                 if (!footsteps.isPlaying) footsteps.Play();
                 gameObject.transform.forward = move;
             }
             else
             {
+                animation.state = CharacterAnimation.states.IDLE;
                 footsteps.Stop();
             }
             playerVelocity.y += gravityValue * Time.deltaTime;
@@ -59,6 +64,7 @@ public class PlayerMove : MonoBehaviour
         }
         if (Input.GetKeyDown("h"))
         {
+            animation.state = CharacterAnimation.states.HIDING;
             hide = !hide;
         }
     }

@@ -950,7 +950,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 2462847665540120086, guid: 39facc1b1ad431c4a8c72e876da4d93c, type: 3}
-  terrain: {fileID: 1648281973}
 --- !u!4 &686917170
 Transform:
   m_ObjectHideFlags: 0
@@ -2599,21 +2598,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ennemy
       objectReference: {fileID: 0}
+    - target: {fileID: 2462847665540120086, guid: 39facc1b1ad431c4a8c72e876da4d93c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2462847665540120090, guid: 39facc1b1ad431c4a8c72e876da4d93c, type: 3}
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 2462847665540120090, guid: 39facc1b1ad431c4a8c72e876da4d93c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.1402376
+      value: 3.37
       objectReference: {fileID: 0}
     - target: {fileID: 2462847665540120090, guid: 39facc1b1ad431c4a8c72e876da4d93c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.32
+      value: 1.507
       objectReference: {fileID: 0}
     - target: {fileID: 2462847665540120090, guid: 39facc1b1ad431c4a8c72e876da4d93c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.9149761
+      value: 4.78
       objectReference: {fileID: 0}
     - target: {fileID: 2462847665540120090, guid: 39facc1b1ad431c4a8c72e876da4d93c, type: 3}
       propertyPath: m_LocalRotation.w
