@@ -17,8 +17,6 @@ public class EnnemyBehavior : MonoBehaviour
     private bool begin = false;
     private float dist_target;
     private Light lightSight;
-    private Material leftEye;
-    private Material rightEye;
     public Color stdColor;
     public Color alertColor;
 
@@ -29,10 +27,6 @@ public class EnnemyBehavior : MonoBehaviour
         lightSight = lightChild.GetComponent<Light>();
         lightSight.spotAngle = sightAngle;
         lightSight.range = dist_monster;
-        GameObject lEyeChild = this.transform.Find("LeftEye").gameObject;
-        leftEye = lEyeChild.GetComponent<Renderer>().material;
-        GameObject rEyeChild = this.transform.Find("RightEye").gameObject;
-        rightEye = rEyeChild.GetComponent<Renderer>().material;
 
     }
 
@@ -85,14 +79,10 @@ public class EnnemyBehavior : MonoBehaviour
         if (following)
         {
             lightSight.color = alertColor;
-            leftEye.SetColor("_Color", alertColor);
-            rightEye.SetColor("_Color", alertColor);
         }
         else
         {
             lightSight.color = stdColor;
-            leftEye.SetColor("_Color", stdColor);
-            rightEye.SetColor("_Color", stdColor);
         }
     }
 
