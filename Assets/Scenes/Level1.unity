@@ -443,6 +443,23 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4472556137763098599, guid: 978bffa88e877fc44aef16b84b267b3c, type: 3}
   m_PrefabInstance: {fileID: 257201863}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &257201866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257201865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0360b5397d5f8a747abbb5d250298799, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_dialogWithPlayer:
+  - text: "La porte est ferm\xE9 \xE0 cl\xE9. Il faut que je la trouve."
+    color: {r: 0, g: 0, b: 0, a: 0}
+  alreadyTalk: 0
+  m_dialogDisplayer: {fileID: 954991413}
 --- !u!1 &305371509
 GameObject:
   m_ObjectHideFlags: 0
@@ -1330,6 +1347,17 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &954991413 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3842814250896575272, guid: 925c3f0c8e275fe4e8d65720bb259954, type: 3}
+  m_PrefabInstance: {fileID: 954991409}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a39d22f95d5eef34693f988305cc0ed0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &971321734
