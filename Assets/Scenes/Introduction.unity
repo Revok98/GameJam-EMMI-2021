@@ -1004,6 +1004,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 695ff55bac76f41ccae4da333fbfa460, type: 3}
+--- !u!114 &1364034062 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1281819282511845029, guid: 15b9f77d8c04b6240b219416af3579ae, type: 3}
+  m_PrefabInstance: {fileID: 1691506078}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a39d22f95d5eef34693f988305cc0ed0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1373901909
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1311,6 +1322,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4472556137763098603, guid: 978bffa88e877fc44aef16b84b267b3c, type: 3}
   m_PrefabInstance: {fileID: 768353160}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1445562516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1445562508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0360b5397d5f8a747abbb5d250298799, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_dialogWithPlayer:
+  - text: "Peleiz : Hanisa ? Ou est ma peluche ? Avec ce monstre qui r\xF4de, je
+      ferai mieux de me cacher sous ma couette."
+    color: {r: 0, g: 0, b: 0, a: 0}
+  alreadyTalk: 0
+  m_dialogDisplayer: {fileID: 1364034062}
 --- !u!1 &1483884288 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 320a0dbd0eec74e5c8d303ccae1e3668, type: 3}
