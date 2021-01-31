@@ -45,7 +45,7 @@ public class PlayerMoveInverse : MonoBehaviour
                 playerVelocity.y = 0f;
             }
 
-            Vector3 move = new Vector3(-Input.GetAxis("Horizontal"), 0, -Input.GetAxis("Vertical"));
+            Vector3 move = new Vector3(Input.GetAxis("Vertical"), 0, -Input.GetAxis("Horizontal"));
             controller.Move(move * Time.deltaTime * playerSpeed * speedBonus);
 
             if (move != Vector3.zero)
