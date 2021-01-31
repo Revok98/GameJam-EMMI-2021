@@ -17,8 +17,15 @@ public class FearBarManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PlayerMoveInverse player = GameObject.Find("Player").GetComponent<PlayerMoveInverse>();
-        if (player.hide)
+        PlayerMove player = GameObject.Find("Player").GetComponent<PlayerMove>();
+        PlayerMoveInverse player2 = GameObject.Find("Player").GetComponent<PlayerMoveInverse>();
+        if (player != null && player.hide)
+        {
+            fill += Time.deltaTime * 0.1f;
+            Bar.fillAmount = fill;
+        }
+
+        if (player2 != null && player2.hide)
         {
             fill += Time.deltaTime * 0.1f;
             Bar.fillAmount = fill;
