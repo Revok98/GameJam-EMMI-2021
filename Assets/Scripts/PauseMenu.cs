@@ -14,7 +14,6 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Debug.Log("LA");
             gameIsPaused = !gameIsPaused;
             PauseGame();
         }
@@ -22,10 +21,8 @@ public class PauseMenu : MonoBehaviour
 
     void PauseGame()
     { 
-        Debug.Log(gameIsPaused);
         if (gameIsPaused)
         {
-            Debug.Log("IF");
             GetComponent<Image>().enabled = true;
             Time.timeScale = 0f;
             ButtonMenu.SetActive(true);

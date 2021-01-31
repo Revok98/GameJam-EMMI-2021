@@ -8,16 +8,20 @@ public class PlayerMoveInverse : MonoBehaviour
     private Vector3 playerVelocity;
     private bool groundedPlayer;
     public float playerSpeed = 2.0f;
+    private float jumpHeight = 1.0f;
     private float gravityValue = -9.81f;
     public bool hide = false;
     public float speedBonus = 1;
     public float speedBonusTime = 0;
     private AudioSource footsteps;
+    private CharacterAnimation animation;
 
     private void Start()
     {
         GameObject child = this.transform.Find("Footsteps").gameObject;
         footsteps = child.GetComponent<AudioSource>();
+        GameObject animChild = this.transform.Find("PersoAnimated").gameObject;
+        animation = animChild.GetComponent<CharacterAnimation>();
         controller = gameObject.AddComponent<CharacterController>();
     }
 
@@ -46,11 +50,13 @@ public class PlayerMoveInverse : MonoBehaviour
 
             if (move != Vector3.zero)
             {
+                animation.state = CharacterAnimation.states.WALKING;
                 if (!footsteps.isPlaying) footsteps.Play();
                 gameObject.transform.forward = move;
             }
             else
             {
+                animation.state = CharacterAnimation.states.IDLE;
                 footsteps.Stop();
             }
             playerVelocity.y += gravityValue * Time.deltaTime;
@@ -58,6 +64,7 @@ public class PlayerMoveInverse : MonoBehaviour
         }
         if (Input.GetKeyDown("h"))
         {
+            animation.state = CharacterAnimation.states.HIDING;
             hide = !hide;
         }
     }
