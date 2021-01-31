@@ -14,12 +14,14 @@ public class CollectibleSpeed : CollectibleItem
     {
         PlayerMove player = GameObject.Find("Player").GetComponent<PlayerMove>();
         PlayerMoveInverse player2 = GameObject.Find("Player").GetComponent<PlayerMoveInverse>();
-        if(player == null)
+        Debug.Log(player);
+        Debug.Log(player2);
+        if(player != null && player.isActiveAndEnabled)
         {
             player.speedBonus = 2;
             player.speedBonusTime = 10;
         }
-        else
+        else if(player2 != null && player2.isActiveAndEnabled)
         {
             player2.speedBonus = 2;
             player2.speedBonusTime = 10;
