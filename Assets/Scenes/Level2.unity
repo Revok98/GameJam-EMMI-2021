@@ -974,6 +974,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2462847665540120091, guid: 39facc1b1ad431c4a8c72e876da4d93c, type: 3}
+      propertyPath: m_Speed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4951968930814692210, guid: 39facc1b1ad431c4a8c72e876da4d93c, type: 3}
       propertyPath: pattern.Array.size
       value: 2
