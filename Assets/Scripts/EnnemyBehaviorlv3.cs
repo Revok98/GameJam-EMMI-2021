@@ -20,6 +20,7 @@ public class EnnemyBehaviorlv3 : MonoBehaviour
     public Color stdColor;
     public Color alertColor;
     private bool returned = true;
+    public MonsterAnimated monsterAnimation;
 
 
     void initLightElements()
@@ -39,6 +40,7 @@ public class EnnemyBehaviorlv3 : MonoBehaviour
         ag = GetComponent<NavMeshAgent>();
         player_script = player.GetComponent<PlayerMove>();
         dist_target = transform.position.y;
+        monsterAnimation.state = MonsterAnimated.states.STOP;
 
         initLightElements();
     }
@@ -56,13 +58,13 @@ public class EnnemyBehaviorlv3 : MonoBehaviour
             ag.SetDestination(player.transform.position);
             target = player.transform.position;
             following = true;
+            monsterAnimation.state = MonsterAnimated.states.WALKING;
         }
         else if (following && (player_script.hide || (hit.collider.gameObject.tag != "Player" && angle >= sightAngle))) { //on arrête de follow
             ag.SetDestination(pattern[current_index]);
             target = pattern[current_index];
             following = false;
             returned = false;
-            Debug.Log("Coucou");
         }
         else if (following && (target - transform.position).magnitude <= 1f) {
             ag.SetDestination(player.transform.position);
@@ -70,7 +72,7 @@ public class EnnemyBehaviorlv3 : MonoBehaviour
         }
         else if (!returned && !following && (target - transform.position).magnitude <= dist_target+0.2f) {
             ag.isStopped = true;
-            transform.rotation = Quaternion.Euler(0, 270, 0);
+            transform.rotation = Quaternion.Euler(0, -90, 0);
             returned = true;
         }
 

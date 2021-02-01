@@ -18,7 +18,7 @@ public class CinematicManager : MonoBehaviour
     private CharacterAnimation charaAnimation;
     public MonsterAnimated monsterAnimation;
     private enum characterPosStates { START, POS1, POS2, BED };
-    private enum monsterPosStates { START, POS1, POS2};
+    private enum monsterPosStates { START, POS1, POS2, POS3};
     private characterPosStates characterPosState;
     private monsterPosStates monsterPosState;
     private float minPointDistance = 0.1f;
@@ -107,8 +107,15 @@ public class CinematicManager : MonoBehaviour
                         monsterPosState = monsterPosStates.POS2;
                     break;
                 case (monsterPosStates.POS2):
+                    monster.transform.position =
+                        Vector3.MoveTowards(monster.transform.position, monsterPoints[2].transform.position, 0.1f);
+                    monster.transform.LookAt(monsterPoints[2].transform.position);
+                    if (Vector3.Distance(monster.transform.position, monsterPoints[2].transform.position) <= minPointDistance)
+                        monsterPosState = monsterPosStates.POS3;
+                    break;
+                case (monsterPosStates.POS3):
                     monsterAnimation.state = MonsterAnimated.states.STOP;
-                    monster.transform.LookAt(new Vector3(monsterPoints[2].transform.position.x, 1, monsterPoints[2].transform.position.z));
+                    monster.transform.LookAt(new Vector3(monsterPoints[3].transform.position.x, 1, monsterPoints[3].transform.position.z));
                     StartCoroutine(FadeImage(false, false,true));
                     break;
                 default:

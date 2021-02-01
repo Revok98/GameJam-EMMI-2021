@@ -944,7 +944,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2462847665540120090, guid: 39facc1b1ad431c4a8c72e876da4d93c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 58
+      value: 59.3
       objectReference: {fileID: 0}
     - target: {fileID: 2462847665540120090, guid: 39facc1b1ad431c4a8c72e876da4d93c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1008,9 +1008,10 @@ MonoBehaviour:
   dist_monster: 8
   sightAngle: 20
   pattern:
-  - {x: 58, y: 1.25, z: -4}
+  - {x: 59.3, y: 1.25, z: -4}
   stdColor: {r: 1, g: 0.56037736, b: 0.56037736, a: 0}
   alertColor: {r: 1, g: 0, b: 0, a: 0}
+  monsterAnimation: {fileID: 1664601385}
 --- !u!1 &284029052 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 320a0dbd0eec74e5c8d303ccae1e3668, type: 3}
@@ -3714,7 +3715,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 10
+  m_Range: 25
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -4525,6 +4526,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.7668093, y: 0.05657242, z: 0.37787676}
   m_Center: {x: 0, y: -0.02828621, z: 0.18893838}
+--- !u!114 &1664601385 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5610881693671211109, guid: 39facc1b1ad431c4a8c72e876da4d93c, type: 3}
+  m_PrefabInstance: {fileID: 255880748}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f347030edc6cb21459dbfa8587c6844d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1714644536
 GameObject:
   m_ObjectHideFlags: 0
