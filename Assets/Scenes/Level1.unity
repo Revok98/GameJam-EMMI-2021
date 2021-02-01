@@ -2822,6 +2822,10 @@ PrefabInstance:
       propertyPath: pattern.Array.data[1].z
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 6864829177636003553, guid: 39facc1b1ad431c4a8c72e876da4d93c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39facc1b1ad431c4a8c72e876da4d93c, type: 3}
 --- !u!1 &1905499718 stripped
