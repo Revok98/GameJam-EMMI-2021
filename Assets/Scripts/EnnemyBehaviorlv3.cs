@@ -58,7 +58,6 @@ public class EnnemyBehaviorlv3 : MonoBehaviour
             ag.SetDestination(player.transform.position);
             target = player.transform.position;
             following = true;
-            monsterAnimation.state = MonsterAnimated.states.WALKING;
         }
         else if (following && (player_script.hide || (hit.collider.gameObject.tag != "Player" && angle >= sightAngle))) { //on arrête de follow
             ag.SetDestination(pattern[current_index]);
@@ -79,6 +78,7 @@ public class EnnemyBehaviorlv3 : MonoBehaviour
         if (following)
         {
             lightSight.color = alertColor;
+            monsterAnimation.state = MonsterAnimated.states.WALKING;
         }
         else
         {
