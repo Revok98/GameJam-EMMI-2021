@@ -1429,8 +1429,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_dialogWithPlayer:
-  - text: "Peleiz : Hanisa ? Ou est ma peluche ? Avec ce monstre qui r\xF4de, je
-      ferai mieux de me cacher sous ma couette."
+  - text: Oh non encore ce cauchemar ! Hanisa ? Ou es-tu ma peluche ? Avec ce monstre,
+      je ferai mieux de me cacher sous ma couette.
     color: {r: 0, g: 0, b: 0, a: 0}
   alreadyTalk: 0
   m_dialogDisplayer: {fileID: 1391719950}
@@ -2025,6 +2025,10 @@ PrefabInstance:
     - target: {fileID: 2839740758387205119, guid: 925c3f0c8e275fe4e8d65720bb259954, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3842814250896575278, guid: 925c3f0c8e275fe4e8d65720bb259954, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 925c3f0c8e275fe4e8d65720bb259954, type: 3}

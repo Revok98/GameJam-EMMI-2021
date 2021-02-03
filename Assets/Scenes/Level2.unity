@@ -4093,6 +4093,24 @@ Light:
   m_CorrespondingSourceObject: {fileID: 66988975, guid: 978bffa88e877fc44aef16b84b267b3c, type: 3}
   m_PrefabInstance: {fileID: 1114901333}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1114901337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114901335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0360b5397d5f8a747abbb5d250298799, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_dialogWithPlayer:
+  - text: "Maman ? Pourquoi es-tu partie ? C'est toi qui m'a laiss\xE9 cette lumi\xE8re
+      ? Ne les laisse pas me faire du mal !"
+    color: {r: 0, g: 0, b: 0, a: 0}
+  alreadyTalk: 0
+  m_dialogDisplayer: {fileID: 0}
 --- !u!1 &1199437366
 GameObject:
   m_ObjectHideFlags: 0

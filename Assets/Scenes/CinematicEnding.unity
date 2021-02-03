@@ -1915,7 +1915,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_dialogWithPlayer:
-  - text: Enfin de retour dans ma chambre !
+  - text: Oh Hanisa !
     color: {r: 0, g: 0, b: 0, a: 0}
   alreadyTalk: 0
   m_dialogDisplayer: {fileID: 1156067566}
@@ -2065,10 +2065,10 @@ MonoBehaviour:
   isDialog2Done: 0
   monsterAnimation: {fileID: 1204935633}
   m_dialogPlayer:
-  - text: Oh Hanisa !
+  - text: Maintenant que je suis avec toi ils ne peuvent plus rien contre nous.
     color: {r: 0, g: 0, b: 0, a: 0}
   m_dialogMonster:
-  - text: Bouh
+  - text: "Ce soir, tu es sauf. Mais elle ne sera pas toujours l\xE0 pour toi..."
     color: {r: 0, g: 0, b: 0, a: 0}
   m_dialogDisplayer: {fileID: 1156067566}
 --- !u!4 &2143606379
