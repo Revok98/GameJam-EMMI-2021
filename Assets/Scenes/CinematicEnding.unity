@@ -174,6 +174,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 320a0dbd0eec74e5c8d303ccae1e3668, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c223a2028acaa554a82b6c190c207393, type: 2}
     - target: {fileID: 919132149155446097, guid: 320a0dbd0eec74e5c8d303ccae1e3668, type: 3}
       propertyPath: m_Name
       value: Mur (1)
@@ -292,6 +296,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9ab4233d56bd143f89fe17e35e528789, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c223a2028acaa554a82b6c190c207393, type: 2}
     - target: {fileID: 919132149155446097, guid: 9ab4233d56bd143f89fe17e35e528789, type: 3}
       propertyPath: m_Name
       value: "Mur Inte\u0301rieur"
@@ -882,6 +890,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 320a0dbd0eec74e5c8d303ccae1e3668, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c223a2028acaa554a82b6c190c207393, type: 2}
     - target: {fileID: 919132149155446097, guid: 320a0dbd0eec74e5c8d303ccae1e3668, type: 3}
       propertyPath: m_Name
       value: Mur (2)
@@ -1077,6 +1089,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 695ff55bac76f41ccae4da333fbfa460, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c223a2028acaa554a82b6c190c207393, type: 2}
     - target: {fileID: 919132149155446097, guid: 695ff55bac76f41ccae4da333fbfa460, type: 3}
       propertyPath: m_Name
       value: Mur Porte Gauche
@@ -1175,6 +1191,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 320a0dbd0eec74e5c8d303ccae1e3668, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c223a2028acaa554a82b6c190c207393, type: 2}
     - target: {fileID: 919132149155446097, guid: 320a0dbd0eec74e5c8d303ccae1e3668, type: 3}
       propertyPath: m_Name
       value: Mur
@@ -1807,6 +1827,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7739129916030510891, guid: ef251fc8fce53d64788252487d6947e4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 607163ed94f17c540b50f10ed9beb9f5, type: 2}
+    - target: {fileID: 7739129917406922589, guid: ef251fc8fce53d64788252487d6947e4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 607163ed94f17c540b50f10ed9beb9f5, type: 2}
     - target: {fileID: 8061999721115332359, guid: ef251fc8fce53d64788252487d6947e4, type: 3}
       propertyPath: m_RootOrder
       value: 3
