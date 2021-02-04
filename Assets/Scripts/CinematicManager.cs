@@ -17,6 +17,7 @@ public class CinematicManager : MonoBehaviour
     private bool isTransitionOpenDone;
     private CharacterAnimation charaAnimation;
     public MonsterAnimated monsterAnimation;
+    public GameObject plush;
     private enum characterPosStates { START, POS1, POS2, BED };
     private enum monsterPosStates { START, POS1, POS2, POS3};
     private characterPosStates characterPosState;
@@ -76,6 +77,7 @@ public class CinematicManager : MonoBehaviour
                 if (!go_monster)
                 {
                     StartCoroutine(FadeImage(true, false, false));
+                    Destroy(plush);
                     charaAnimation.state = CharacterAnimation.states.HIDING;
                     character.transform.position = charaPoints[2].transform.position;
                     character.transform.LookAt(charaPoints[3].transform.position);
