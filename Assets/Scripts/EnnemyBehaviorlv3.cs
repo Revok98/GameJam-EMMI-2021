@@ -11,7 +11,7 @@ public class EnnemyBehaviorlv3 : MonoBehaviour
     private bool following = false;
     public float dist_monster = 10f;
     public float sightAngle = 45f;
-    PlayerMove player_script;
+    PlayerMoveInverse player_script;
     public List<Vector3> pattern = new List<Vector3>();
     int current_index = 0;
     private bool begin = false;
@@ -19,7 +19,7 @@ public class EnnemyBehaviorlv3 : MonoBehaviour
     private Light lightSight;
     public Color stdColor;
     public Color alertColor;
-    private bool returned = true;
+    private bool returned = false;
     public MonsterAnimated monsterAnimation;
 
 
@@ -38,7 +38,7 @@ public class EnnemyBehaviorlv3 : MonoBehaviour
         player = GameObject.Find("Player");
         target = player.transform.position;
         ag = GetComponent<NavMeshAgent>();
-        player_script = player.GetComponent<PlayerMove>();
+        player_script = player.GetComponent<PlayerMoveInverse>();
         dist_target = transform.position.y;
         monsterAnimation.state = MonsterAnimated.states.STOP;
 
@@ -73,6 +73,10 @@ public class EnnemyBehaviorlv3 : MonoBehaviour
             ag.isStopped = true;
             transform.rotation = Quaternion.Euler(0, -90, 0);
             returned = true;
+            monsterAnimation.state = MonsterAnimated.states.STOP;
+        }
+        if (!following && returned) {
+            transform.rotation = Quaternion.Euler(0, -90, 0);
         }
 
         if (following)
